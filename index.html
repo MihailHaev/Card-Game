@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>🦄Memoji</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<article>
+	<header>
+		<h1>Memoji</h1>
+	</header>
+	<main class="cards" id="cards">
+	<div id="0" class="cards__card"></div>
+	<div id="1" class="cards__card"></div>
+	<div id="2" class="cards__card"></div>
+	<div id="3" class="cards__card"></div>
+	<div id="4" class="cards__card"></div>
+	<div id="5" class="cards__card"></div>
+	<div id="6" class="cards__card"></div>
+	<div id="7" class="cards__card"></div>
+	<div id="8" class="cards__card"></div>
+	<div id="9" class="cards__card"></div>
+	<div id="10" class="cards__card"></div>
+	<div id="11" class="cards__card"></div>		
+	</main>
+	<footer class="time">
+		<time id="timer"></time
+	></footer>
+	<div id='modal' class="modal">
+		<div class="endgame">
+			<h2 id='result'></h2>
+			<div class="retry" id='retry' onclick="restartOrRetry()"></div>
+		</div>
+	</div>
+</article>
+<script src='script.js'></script>
+<script>
+let gameSettings = {
+	cardsId: 'cards',
+		card: 'cards__card',
+		flip: 'cards__card_flip',
+		cardGood: 'cards__card_good',
+		cardBad: 'cards__card_bad'
+},
+gameTime = 60;
+gameStart(gameSettings, gameTime);
+function restartOrRetry() {
+	console.log(gameSettings, gameTime);
+	gameStart(gameSettings, gameTime);
+}
+	
+</script>
+</body>
+</html>
